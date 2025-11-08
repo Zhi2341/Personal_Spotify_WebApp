@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { Renderer, Program, Mesh, Triangle, Vec2 } from 'ogl';
-import './css/DarkVeil.css';
+import '../css/DarkVeil.css';
 
 const vertex = `
 attribute vec2 position;
@@ -85,12 +85,12 @@ type Props = {
 };
 
 export default function DarkVeil({
-                                     hueShift = 0,
+                                     hueShift = 199,
                                      noiseIntensity = 0,
                                      scanlineIntensity = 0,
                                      speed = 0.5,
                                      scanlineFrequency = 0,
-                                     warpAmount = 0,
+                                     warpAmount = 4,
                                      resolutionScale = 1
                                  }: Props) {
     const ref = useRef<HTMLCanvasElement>(null);

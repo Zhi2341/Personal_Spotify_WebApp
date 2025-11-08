@@ -1,3 +1,44 @@
 /* src/index.css */
-html, body, #root { height: 100%; }
-body { margin: 0; }
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body, #root
+{
+    height: 100%;
+}
+
+body
+{
+    margin: 0;
+}
+
+/* Full-viewport grid that centers content */
+.main_container
+{
+    display: grid;
+    min-height: 100vh;        /* fill screen */
+    grid-template-columns: repeat(5, minmax(2em, 1fr));
+    grid-template-rows: repeat(5, minmax(2em, 1fr));
+    place-items: center;       /* centers both axes */
+    padding: clamp(16px, 4vw, 48px);
+}
+
+/* Center the header and cap its width */
+header
+{
+    display: flex;
+    grid-row-start: 2;
+}
+
+.main_header
+{
+    color: white;
+    text-align: center;
+    justify-self: center;      /* horizontal alignment in grid */
+    align-self: center;        /* vertical alignment in grid */
+    max-width: 60ch;           /* readable line length */
+}
