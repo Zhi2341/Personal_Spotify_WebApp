@@ -1,7 +1,9 @@
 import './css/index.css'
 import './css/DarkVeil.css'
+import './css/nav.css'
 import DarkVeil from "./components/BackGroundDarkVeil.tsx";
-import SplitText from "./components/PageHeader.tsx"; `./BackGroundDarkVeil`
+import SplitText from "./components/PageHeader.tsx";
+import NavBar from "./components/Navigation.tsx"; `./BackGroundDarkVeil`
 
 const handleAnimationComplete = () => {
     console.log('All letters have animated!');
@@ -29,9 +31,11 @@ export default function App() {
                     />
                 </h1>
             </header>
-
+            <nav>
+                <NavBar />
+            </nav>
             <main>
-
+                
             </main>
         </div>
     );
